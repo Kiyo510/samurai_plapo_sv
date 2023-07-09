@@ -42,12 +42,12 @@ paths:
           description: Room created
         '400':
           description: Invalid request
-  /rooms/{roomId}/users:
+  /rooms/{room_id}/users:
     post:
       summary: Add a user to a room
       parameters:
         - in: path
-          name: roomId
+          name: room_id
           schema:
             type: integer
           required: true
@@ -77,13 +77,13 @@ paths:
             schema:
               type: object
               properties:
-                userId:
+                user_id:
                   type: integer
                   description: The user ID.
-                roomId:
+                room_id:
                   type: integer
                   description: The room ID.
-                estimatedPoint:
+                estimated_point:
                   type: integer
                   description: The estimated point (Fibonacci number).
       responses:
